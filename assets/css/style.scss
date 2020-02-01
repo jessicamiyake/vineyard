@@ -1,4 +1,4 @@
-//@import "{{theme: jekyll-theme-midnight}}";
+@import "{{theme: jekyll-theme-midnight}}";
 
 .searchbar {
     text-align: center;
@@ -10,7 +10,7 @@
 .searchbar {
     align-self: center;
 }
-   button {
+   #button {
   background-color: #e8e8e8;
   border: none;
   color: White;
@@ -20,7 +20,7 @@
   display: inline-block;
   font-size: 16px;
 }
-button:hover {
+#button:hover {
   background-color: #e8e8e8;
   color: white;
 }
