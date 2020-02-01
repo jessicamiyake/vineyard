@@ -1,15 +1,17 @@
 button {
-  background-color: #4CAF50;;
+  background-color:#19b58b;
   border: none;
   color: black;
   padding: 10px 25px;
   text-align: center;
-  text-decoration: underline overline;
+  text-decoration: none;
   display: inline-block;
   font-size: 10px;
 }
 
+button {border-radius: 10px;}
+
 button:hover {
-  background-color: #e8e8e8;
-  color: grey;
+  background-color: #90ee90;
+  color: black;
 }
