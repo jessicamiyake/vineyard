@@ -1,6 +1,6 @@
 @import "{{theme: jekyll-theme-midnight}}";
 
-.searchbutton {
+button {
   background-color: #e8e8e8;
   border: none;
   color: White;
@@ -11,7 +11,7 @@
   font-size: 16px;
 }
 
-.searchbutton:hover {
+button:hover {
   background-color: #e8e8e8;
   color: white;
 }
