@@ -1,15 +1,15 @@
-button {
+.button {
   background-color: #e8e8e8;
   border: none;
-  color: White;
-  padding: 15px 32px;
+  color: black;
+  padding: 10px 25px;
   text-align: center;
   text-decoration: underline overline;
   display: inline-block;
-  font-size: 16px;
+  font-size: 10px;
 }
 
-button:hover {
+.button:hover {
   background-color: #e8e8e8;
-  color: white;
+  color: grey;
 }
