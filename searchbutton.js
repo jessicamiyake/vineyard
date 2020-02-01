@@ -54,7 +54,6 @@ function search() {
     console.log(searchtext);
     if (isTag) {
         for (var j = 0; j < searchtext.length; j++) {
-            //searchtext[j] = searchtext[j].subString(1);
             for (var k = 0; k < vines.length; k++) {
                 vines[k].tags.forEach(tag => {
                     if (searchtext[j] === tag && !results.includes(vines[k])) {
@@ -82,7 +81,6 @@ function search() {
     }
     var vineresults = "";
     for (var i = 0; i < results.length; i++) {
-        results.score.sort();
         vineresults = vineresults + "<video controls width=\"300px\"><source src=\"" + results[i].url + "\"type=\"video/mp4\"></video><br>";
         console.log(results[i].url);
         document.getElementById("results").innerHTML = vineresults;
