@@ -68,7 +68,7 @@ function search() {
         }
     } else {
         for (var l = 0; l < vines.length; l++) {
-            console.log("searching transcript")
+            console.log("searching transcript");
             searchtext.forEach(term => {
                 if (vines[l].transcript.includes(term) && !results.includes(vines[l])) {
                     vines[l].score++;
