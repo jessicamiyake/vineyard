@@ -12,8 +12,8 @@ var s3 = new AWS.S3(); //new s3 client
 
 //var bucketName = 'node-sdk-sample-' + uuid.v4();
 var bucketName = "node-sdk-sample-da9bc89e-a099-498d-b3d9-fb4cdd48aa7d";
-var keyName = "kyle.mp4"; //name of file in local directory
-var filename = "kyle.mp4"; //desired name of file on s3
+var keyName = "/videos/junior.mp4"; //name of file in local directory
+var filename = "/videos/junior.mp4"; //desired name of file on s3
 var mediaFormat = "mp4";
 var jobName = "transcription_job" + Math.random();
 
