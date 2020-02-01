@@ -10,7 +10,8 @@
 .searchbar {
     align-self: center;
 }
-  .searchbutton {
+
+.searchbutton {
   background-color: #e8e8e8;
   border: none;
   color: White;
@@ -20,11 +21,10 @@
   display: inline-block;
   font-size: 16px;
 }
+
 .searchbutton:hover {
   background-color: #e8e8e8;
   color: white;
-}
-
 }
 
 #index {
