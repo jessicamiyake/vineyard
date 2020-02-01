@@ -2,6 +2,15 @@
 
 .searchbar {
     text-align: center;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+
+.searchbar {
+    align-self: center;
+}
+   
 }
 
 #index {
