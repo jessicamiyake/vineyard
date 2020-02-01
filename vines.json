@@ -1,29 +1,40 @@
 {
-  "name":"junior",
-  "url":"https://vine.co/v/O5YTY7YL551",
-  "tags": ["kids","funny"],
-  "dialogue":"If your name is Junior and you're really handsome come on raise your hands",
-  "description":"child reaches for pizza box and raises hand"
-},
-{
-  "name":"a knife",
-  "url":"https://twitter.com/i/status/909297943458582528",
-  "tags":["kids","funny"],
-  "dialogue":"let me see what you have a knife no",
-  "description":""
-},
-{
-  "name":"giraffe",
-  "url":"https://vine.co/v/OETAhXO7t2V/",
-  "tags":["funny","silly"],
-  "dialogue":"say colorado i'm a giraffe",
-  "description":""
-},
-{
-  "name":"arrow",
-  "url":"https://vine.co/v/eVdEiIBiL3t",
-  "tags":["kids","ouch"],
-  "dialogue":"",
-  "description":""
+  "vines": [
+    {
+      "id": "1",
+      "url": "videos/junior.mp4",
+      "tags": ["kids","pizza"],
+      "dialogue": "if your name is junior and you're really handsome come on raise your hand"
+    },
+    {
+      "id": "2",
+      "url": "videos/knife.mp4",
+      "tags": ["knife","kids"],
+      "dialogue": "let me see what you have a knife no"
+    },
+    {
+      "id": "3",
+      "url": "videos/giraffe.mp4",
+      "tags": ["giraffe","colorado"],
+      "dialogue": "say colorado i'm a giraffe"
+    },
+    {
+      "id": "4",
+      "url": "videos/arrow.mp4",
+      "tags": [],
+      "dialogue": ""
+    },
+    {
+      "id": "5",
+      "url": "videos/light.mp4",
+      "tags": [],
+      "dialogue": "kevin don't kevin kevin kevin kevin watch the light dude"
+    },
+    {
+      "id": "6",
+      "url": "videos/chickens.mp4",
+      "tags": [],
+      "dialogue": "look at all those chickens"
+    }
+  ]
 }
-  
