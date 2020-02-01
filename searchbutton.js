@@ -5,37 +5,43 @@ function search() {
         id: "1",
         url: "videos/junior.mp4",
         tags: ["#kids","#pizza"],
-        dialogue: "if your name is junior and you're really handsome come on raise your hand"
+        transcript: "if your name is junior and you're really handsome come on raise your hand",
+        score: 0
       };
     var v2 = {
         id: "2",
         url: "videos/knife.mp4",
         tags: ["#knife","#kids"],
-        dialogue: "let me see what you have a knife no"
+        transcript: "let me see what you have a knife no",
+        score: 0
       };
     var v3 = {
         id: "3",
         url: "videos/giraffe.mp4",
         tags: ["#giraffe","#colorado"],
-        dialogue: "say colorado i'm a giraffe"
+        transcript: "say colorado i'm a giraffe",
+        score: 0
       };
     var v4 = {
         id: "4",
         url: "videos/arrow.mp4",
         tags: [],
-        dialogue: ""
+        transcript: "",
+        score: 0
       };
     var v5 = {
         id: "5",
         url: "videos/light.mp4",
         tags: [],
-        dialogue: "kevin don't kevin kevin kevin kevin watch the light dude"
+        transcript: "kevin don't kevin kevin kevin kevin watch the light dude",
+        score: 0
       };
     var v6 = {
         id: "6",
         url: "videos/chickens.mp4",
         tags: [],
-        dialogue: "look at all those chickens"
+        transcript: "look at all those chickens",
+        score: 0
       };
     var vines = [v1,v2,v3,v4,v5,v6];
     var results = [];
@@ -54,18 +60,28 @@ function search() {
                     if (searchtext[j] === tag && !results.includes(vines[k])) {
                         console.log(vines[k].url);
                         results.push(vines[k]);
+                        vines[k].score++;
                     }
                 });
             }
         }
     } else {
         for (var l = 0; l < vines.length; l++) {
-            
+            console.log("searching transcript")
+            searchtext.forEach(term => {
+                if (vines[l].transcript.includes(term) && !results.includes(vines[l])) {
+                    vines[l].score++;
+                    results.push(vines[l]);
+                    console.log(vines[l].url);
+                }
+            });
         }
     }
     for (var i = 0; i < results.length; i++) {
+        //results.score.sort();
         var vineresults = vineresults + "<video controls width=\"300px\"><source src=\"" + results[i].url + "\"type=\"video/mp4\"></video><br>";
         console.log(results[i].url);
         document.getElementById("results").innerHTML = vineresults;
+        results[i].score = 0;
     }
 }
