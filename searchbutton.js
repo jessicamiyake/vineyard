@@ -49,6 +49,7 @@ function search() {
             for (var k = 0; k < vines.size(); k++) {
                 vines[k].tags.array.forEach(tag => {
                     if (searchtext[j] === tag && !results.includes(vines[k])) {
+                        console.log(tag);
                         results.push(vines[k]);
                     }
                 });
