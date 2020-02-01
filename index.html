@@ -6,18 +6,7 @@ layout: default
 <html>
 <head>
 <title>Vineyard</title>
-<link rel="stylesheet" href="{{ './assets/css/style.css?v=' | append: site.github.build_revision | relative_url }}">
-<script>
-function search() {
-  var input = document.getElementById("searchtext");
-  var results = [];
-  for (var i = 0; i < obj.list.length; i++) {
-    if (obj.list[i]["description"] == input || obj.list[i]["dialogue"]) {
-      results.push(obj.list[i]);
-    }
-  }
-}
-</script>
+<link rel="stylesheet" href="{{ './assets/css/style.css' | append: site.github.build_revision | relative_url }}">
 </head>
 <body>
 
@@ -25,8 +14,7 @@ function search() {
   <input type="text" id="searchtext" placeholder="Search for a Vine! Use # to search for a tag" style="width:300px;"  margin: 4px auto;
   text-align: "center";  display: inline-block>
   
-
-  <button>Search</button>
+  <button id="searchbutton">Search</button>
 </div>
 
 <footer>
