@@ -49,6 +49,7 @@ function search() {
     
     var tags = [v1tags, v2tags, v3tags];
     var results = [];
+<<<<<<< HEAD
 
     var input = document.getElementById('searchtext').value;
     var isTag = input.startsWith("#");
@@ -71,4 +72,7 @@ function search() {
         document.getElementById("results").appendChild = innerHTML;
     }
     
+=======
+    document.getElementById("results").innerHTML = "<video controls><source src=\"videos/junior.mp4\" type=\"video/mp4\"></video>";
+>>>>>>> afd06fb7722547771d6c9ee52a1489f48895be9e
 }
