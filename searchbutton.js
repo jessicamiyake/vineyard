@@ -59,10 +59,12 @@ function search() {
             }
         }
     } else {
-
+        for (var l = 0; l < vines.length; l++) {
+            
+        }
     }
     for (var i = 0; i < results.length; i++) {
-        var vineresults = vineresults + "<video><source src=\"" + results[i].url + "\"type=\"video/mp4\"></video><br>";
+        var vineresults = vineresults + "<video controls width=\"300px\"><source src=\"" + results[i].url + "\"type=\"video/mp4\"></video><br>";
         console.log(results[i].url);
         document.getElementById("results").innerHTML = vineresults;
     }
