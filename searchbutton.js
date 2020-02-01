@@ -1,5 +1,4 @@
 
-var { search, suggest, regex } = require('puzzy-search');
 function search() {
     var v1 = JSON.parse({
         "id": "1",
@@ -38,16 +37,7 @@ function search() {
         "dialogue": "look at all those chickens"
       });
     var vines = [v1,v2,v3,v4,v5,v6];
-    var v1tags = ["kids", "pizza"];
-    var v2tags = ["knife", "kids"];
-    var v3tags = ["giraffe", "colorado"];
-
-    var is = search("tirde", "i'm tired");
-    if (is) {
-        console.log(is);
-    }
     
-    var tags = [v1tags, v2tags, v3tags];
     var results = [];
 
     var input = document.getElementById('searchtext').value;
