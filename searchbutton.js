@@ -58,9 +58,10 @@ function search() {
             for (var k = 0; k < vines.length; k++) {
                 vines[k].tags.forEach(tag => {
                     if (searchtext[j] === tag && !results.includes(vines[k])) {
-                        console.log(vines[k].url);
                         results.push(vines[k]);
                         vines[k].score++;
+                        console.log(vines[k].url);
+                        console.log(vines[k].score);
                     }
                 });
             }
@@ -73,13 +74,16 @@ function search() {
                     vines[l].score++;
                     results.push(vines[l]);
                     console.log(vines[l].url);
+                    console.log(vines[l].score);
+                    
                 }
             });
         }
     }
+    var vineresults = "";
     for (var i = 0; i < results.length; i++) {
-        //results.score.sort();
-        var vineresults = vineresults + "<video controls width=\"300px\"><source src=\"" + results[i].url + "\"type=\"video/mp4\"></video><br>";
+        results.score.sort();
+        vineresults = vineresults + "<video controls width=\"300px\"><source src=\"" + results[i].url + "\"type=\"video/mp4\"></video><br>";
         console.log(results[i].url);
         document.getElementById("results").innerHTML = vineresults;
         results[i].score = 0;
