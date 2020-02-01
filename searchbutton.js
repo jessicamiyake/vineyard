@@ -57,8 +57,8 @@ function search() {
         }
     }
     for (var i = 0; i < results.size(); i++) {
-        var innerHTML = "<video><source src=" + results[i].url + "type=\"video/mp4\"></video><br>";
-        document.getElementById("results").appendChild = innerHTML;
+        var vineresults.innerHTML = "<video><source src=" + results[i].url + "type=\"video/mp4\"></video><br>";
+        document.getElementById("results").appendChild = vineresults;
     }
     
     document.getElementById("results").innerHTML = "<video controls><source src=\"videos/junior.mp4\" type=\"video/mp4\"></video>";
