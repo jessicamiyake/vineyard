@@ -45,12 +45,6 @@ function search() {
     var results = [];
 
     var input = document.getElementById('searchtext').value;
-    input.addEventListener("keyup", function(event) {
-      if (event.keyCode === 13) {
-          event.preventDefault();
-        document.getElementById("searchbutton").click();
-      }
-    });
     var isTag = input.startsWith("#");
     input.toLowerCase();
     var searchtext = input.split(" ");
