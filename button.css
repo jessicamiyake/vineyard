@@ -2,7 +2,7 @@ button {
   background-color:#19b58b;
   border: none;
   color: black;
-  padding: 10px 25px;
+  /*padding: 10px 25px;*/
   text-align: right;
   text-decoration: none;
   display: inline-block;
