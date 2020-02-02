@@ -1,4 +1,3 @@
-
 function search() {
     var v1 = {
         id: "1",
@@ -48,6 +47,7 @@ function search() {
     var input = document.getElementById('searchtext').value;
     input.addEventListener("keyup", function(event) {
       if (event.keyCode === 13) {
+          event.preventDefault();
         document.getElementById("searchbutton").click();
       }
     });
