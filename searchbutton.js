@@ -29,7 +29,7 @@ function search() {
     var v4 = {
         id: "4",
         url: "videos/arrow.mp4",
-        tags: [],
+        tags: ["#kids","#ouch"],
         transcript: "",
         score: 0
     };
@@ -43,11 +43,25 @@ function search() {
     var v6 = {
         id: "6",
         url: "videos/chickens.mp4",
-        tags: [],
+        tags: ["#kids","#animals"],
         transcript: "look at all those chickens",
         score: 0
     };
-    var vines = [v1, v2, v3, v4, v5, v6];
+    var v7 = {
+        id: "6",
+        url: "videos/cantgo.mp4",
+        tags: ["#dogs","#animals"],
+        transcript: "you can't go no i'm i'm sorry you can't go",
+        score: 0
+    };
+    var v8 = {
+        id: "6",
+        url: "videos/hungry.mp4",
+        tags: ["#dogs","#animals"],
+        transcript: "are you hungry are you hungry are you hungry",
+        score: 0
+    };
+    var vines = [v1, v2, v3, v4, v5, v6, v7, v8];
     //var results = [];
 
     var input = document.getElementById('searchtext').value;
