@@ -1,3 +1,8 @@
+input.addEventListener("keyup", function(event) {
+  if (event.keyCode === 13) {
+    document.getElementById("searchbutton").click();
+  }
+});
 function search() {
     var v1 = {
         id: "1",
