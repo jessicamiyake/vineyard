@@ -1,3 +1,11 @@
+document.getElementById("searchtext").onkeypress = function(event){
+ 
+    if(event.keyCode == 13 || event.which == 13){
+        search();   
+    }
+    
+}
+
 function search() {
     var v1 = {
         id: "1",
