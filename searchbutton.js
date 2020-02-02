@@ -48,7 +48,7 @@ function search() {
         score: 0
     };
     var vines = [v1, v2, v3, v4, v5, v6];
-    var results = [];
+    //var results = [];
 
     var input = document.getElementById('searchtext').value;
     var isTag = input.startsWith("#");
@@ -79,7 +79,7 @@ function search() {
             }
         }*/
 
-    } else {
+    } else if (input != "") {
         console.log("desc");
         /*for (var l = 0; l < vines.length; l++) {
             console.log("searching transcript");
