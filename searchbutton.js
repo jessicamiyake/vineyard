@@ -1,5 +1,3 @@
-console.log('loading search');
-
 function search() {
     var v1 = {
         id: "1",
@@ -47,13 +45,23 @@ function search() {
     var results = [];
 
     var input = document.getElementById('searchtext').value;
-    console.log(input);
+    //console.log(input);
     var isTag = input.startsWith("#");
     input.toLowerCase();
     var searchtext = input.split(" ");
-    console.log(searchtext);
+    //console.log(searchtext);
+
+
     if (isTag) {
-        for (var j = 0; j < searchtext.length; j++) {
+      console.log("tag");
+      var options = {
+        shouldSort: true,
+        //includeScore: true,
+        threshold: 0.3,
+        keys: ['tags'],   // keys to search in
+        //id: 'id'                     // return a list of identifiers only
+      }
+        /*for (var j = 0; j < searchtext.length; j++) {
             for (var k = 0; k < vines.length; k++) {
                 vines[k].tags.forEach(tag => {
                     if (searchtext[j] === tag && !results.includes(vines[k])) {
@@ -64,9 +72,11 @@ function search() {
                     }
                 });
             }
-        }
+        }*/
+
     } else {
-        for (var l = 0; l < vines.length; l++) {
+      console.log("desc");
+        /*for (var l = 0; l < vines.length; l++) {
             console.log("searching transcript");
             searchtext.forEach(term => {
                 if (vines[l].transcript.includes(term) && !results.includes(vines[l])) {
@@ -74,16 +84,30 @@ function search() {
                     results.push(vines[l]);
                     console.log(vines[l].url);
                     console.log(vines[l].score);
-                    
+
                 }
-            });
+            });*/
+            var options = {
+              shouldSort: true,
+              //includeScore: true,
+              threshold: 0.6,
+              keys: ['transcript'],   // keys to search in
+              //id: 'id'                     // return a list of identifiers only
+            }
+
+
+        }
+        var f = new Fuse(vines, options);
+        var results = f.search(input);
+        console.log(results);
+        console.log(results[0]);
+
+
+        var vineresults = "";
+        for (var i = 0; i < results.length; i++) {
+          console.log(results[i].url);
+          vineresults = vineresults + "<video controls width=\"300px\"><source src=\"" + results[i].url + "\"type=\"video/mp4\"></video><br>";
+          document.getElementById("results").innerHTML = vineresults;
+            //results[i].score = 0;
         }
     }
-    var vineresults = "";
-    for (var i = 0; i < results.length; i++) {
-        vineresults = vineresults + "<video controls width=\"300px\"><source src=\"" + results[i].url + "\"type=\"video/mp4\"></video><br>";
-        console.log(results[i].url);
-        document.getElementById("results").innerHTML = vineresults;
-        results[i].score = 0;
-    }
-}
