@@ -17,6 +17,14 @@ layout: default
   text-align: left;  display: inline-block>
 
   <button id="searchbutton" onclick="search()">Search</button>
+  <script>
+    function handle(e){
+        if(e.keyCode === 13){
+            e.preventDefault();
+            alert("Enter was pressed was presses");
+        }
+    }
+  </script>
 </div>
 <div id="results" style="text-align:center;">
 
