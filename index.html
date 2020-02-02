@@ -17,6 +17,15 @@ layout: default
   text-align: left;  display: inline-block>
 
   <button id="searchbutton" onclick="search()">Search</button>
+  <script>
+    var input = document.getElementById('searchtext').value;
+    input.addEventListener("keyup", function(event) {
+      if (event.keyCode === 13) {
+        event.preventDefault();
+        document.getElementById("searchbutton").click();
+      }
+    });
+  </script>
 </div>
 <div id="results" style="text-align:center;">
 
