@@ -15,8 +15,6 @@ layout: default
 <div class="searchbar">
   <input type="text" id="searchtext" onsubmit="search()" placeholder="Search for a Vine! Use # to search for a tag" style="width:550px;"  margin: 6px auto;
   text-align: left;  display: inline-block>
-
-  <button id="searchbutton" onclick="search()">Search</button>
   <script>
     function handle(e){
         if(e.keyCode === 13){
@@ -25,6 +23,8 @@ layout: default
         }
     }
   </script>
+  <button id="searchbutton" onclick="search()">Search</button>
+
 </div>
 <div id="results" style="text-align:center;">
 
