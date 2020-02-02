@@ -1,8 +1,4 @@
-input.addEventListener("keyup", function(event) {
-  if (event.keyCode === 13) {
-    document.getElementById("searchbutton").click();
-  }
-});
+
 function search() {
     var v1 = {
         id: "1",
@@ -50,7 +46,11 @@ function search() {
     var results = [];
 
     var input = document.getElementById('searchtext').value;
-    //console.log(input);
+    input.addEventListener("keyup", function(event) {
+      if (event.keyCode === 13) {
+        document.getElementById("searchbutton").click();
+      }
+    });
     var isTag = input.startsWith("#");
     input.toLowerCase();
     var searchtext = input.split(" ");
