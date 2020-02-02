@@ -24,3 +24,7 @@ button:hover {
   margin-right: auto;
   display: block;
 }
+
+hr {
+  margin: 0 0 0px;
+}
