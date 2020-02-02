@@ -13,19 +13,10 @@ layout: default
 <body>
 
 <div class="searchbar">
-  <input type="text" id="searchtext" placeholder="Search for a Vine! Use # to search for a tag" style="width:550px;"  margin: 6px auto;
+  <input type="text" id="searchtext" onsubmit="search()" placeholder="Search for a Vine! Use # to search for a tag" style="width:550px;"  margin: 6px auto;
   text-align: left;  display: inline-block>
 
   <button id="searchbutton" onclick="search()">Search</button>
-  <script>
-    var input = document.getElementById('searchtext').value;
-    input.addEventListener("keyup", function(event) {
-      if (event.keyCode === 13) {
-        event.preventDefault();
-        document.getElementById("searchbutton").click();
-      }
-    });
-  </script>
 </div>
 <div id="results" style="text-align:center;">
 
