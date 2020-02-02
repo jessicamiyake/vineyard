@@ -3,17 +3,20 @@ button {
   border: none;
   color: black;
   padding: 10px 25px;
-  text-align: center;
+  text-align: right;
   text-decoration: none;
   display: inline-block;
   font-size: 10px;
+  border-radius: 10px;
 }
-
-button {border-radius: 10px;}
 
 button:hover {
   background-color: #90ee90;
   color: black;
+}
+
+#searchtext {
+  overflow: hidden;
 }
 
 #results {
